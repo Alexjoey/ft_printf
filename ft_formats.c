@@ -6,7 +6,7 @@
 /*   By: amylle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:15:09 by amylle            #+#    #+#             */
-/*   Updated: 2023/11/04 15:50:03 by amylle           ###   ########.fr       */
+/*   Updated: 2023/12/11 18:34:29 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ int	ft_formats(char c, va_list args)
 	else if (c == 'X')
 		i = ft_format_highhex(va_arg(args, unsigned int));
 	else if (c == '%')
-	{
-		ft_putchar_fd('%', 1);
-		i = 1;
-	}
+		i = ft_format_char('%');
 	return (i);
 }

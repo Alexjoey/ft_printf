@@ -6,7 +6,7 @@
 /*   By: amylle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:36:28 by amylle            #+#    #+#             */
-/*   Updated: 2023/11/04 14:50:42 by amylle           ###   ########.fr       */
+/*   Updated: 2023/12/11 18:23:13 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdarg.h>
 # include "./libft/libft.h"
 
-int		ft_strparser(char *str, va_list args);
 int		ft_formats(char c, va_list args);
 int		ft_printf(const char *str, ...);
 int		ft_isformat(const unsigned int c);
