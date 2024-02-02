@@ -15,10 +15,12 @@
 int	ft_format_highhex(unsigned int i)
 {
 	char	*str;
-	int		strlen;
+	int		len;
 
 	str = ft_itoa_base(i, "0123456789ABCDEF");
-	strlen = ft_format_str(str);
+	if (!str)
+		return (NULL);
+	len = ft_format_str(str);
 	free (str);
-	return (strlen);
+	return (len);
 }

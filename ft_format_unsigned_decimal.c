@@ -13,13 +13,15 @@
 #include "ft_printf.h"
 #include <limits.h>
 
-int	ft_format_unsigned_decimal(unsigned int i)
+int	ft_format_unsigned_decimal(unsigned int n)
 {
 	char	*str;
-	int		strlen;
+	int		len;
 
-	str = ft_itoa_base(i, "0123456789");
-	strlen = ft_format_str(str);
+	str = ft_itoa_base(n, "0123456789");
+	if (!str)
+		return (NULL);
+	len = ft_format_str(str);
 	free (str);
-	return (strlen);
+	return (len);
 }

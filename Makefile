@@ -10,11 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= ft_formats.c ft_printf.c ft_format_char.c ft_isformat.c ft_format_str.c ft_format_decimal.c ft_format_int.c ft_format_unsigned_decimal.c ft_itoa_base.c ft_format_lowhex.c ft_format_highhex.c ft_format_pointer.c
+SRCS		= ft_formats.c ft_printf.c ft_format_char.c ft_isformat.c ft_format_str.c\
+			  ft_format_decimal.c ft_format_int.c ft_format_unsigned_decimal.c\
+			  ft_itoa_base.c ft_format_lowhex.c ft_format_highhex.c ft_format_pointer.c
 
 OBJS		= $(SRCS:.c=.o)
 
-CC			= gcc
+CC			= cc
 CFLAGS		= -Wall -Werror -Wextra -I$(LIBFT_PATH)
 
 RM			= rm -f

@@ -18,6 +18,8 @@ int	ft_format_lowhex(unsigned int i)
 	int		strlen;
 
 	str = ft_itoa_base(i, "0123456789abcdef");
+	if (!str)
+		return (NULL);
 	strlen = ft_format_str(str);
 	free (str);
 	return (strlen);

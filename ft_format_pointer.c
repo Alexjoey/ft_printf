@@ -12,18 +12,20 @@
 
 #include "ft_printf.h"
 
-int	ft_format_pointer(void *yom)
+int	ft_format_pointer(void *ptr)
 {
 	int				len;
 	char			*str;
 
-	if (yom == NULL)
+	if (ptr == NULL)
 	{
 		len = ft_format_str("(nil)");
 		return (len);
 	}	
+	str = ft_itoa_base((unsigned long)ptr, "0123456789abcdef");
+	if (!str)
+		return (NULL);
 	len = ft_format_str("0x");
-	str = ft_itoa_base((unsigned long)yom, "0123456789abcdef");
 	len += ft_format_str(str);
 	free (str);
 	return (len);
