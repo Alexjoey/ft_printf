@@ -6,7 +6,7 @@
 /*   By: amylle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:50:31 by amylle            #+#    #+#             */
-/*   Updated: 2023/11/04 15:20:55 by amylle           ###   ########.fr       */
+/*   Updated: 2024/02/16 19:14:22 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_format_highhex(unsigned int i)
 
 	str = ft_itoa_base(i, "0123456789ABCDEF");
 	if (!str)
-		return (NULL);
+		return (0);
 	len = ft_format_str(str);
 	free (str);
 	return (len);

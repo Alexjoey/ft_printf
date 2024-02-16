@@ -6,7 +6,7 @@
 /*   By: amylle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:15:09 by amylle            #+#    #+#             */
-/*   Updated: 2023/12/11 18:34:29 by amylle           ###   ########.fr       */
+/*   Updated: 2024/02/16 19:15:43 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_formats(char c, va_list args)
 {
 	int	i;
 
+	i = 0;
 	if (c == 'c')
 		i = ft_format_char(va_arg(args, int));
 	else if (c == 's')

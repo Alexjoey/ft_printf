@@ -6,7 +6,7 @@
 /*   By: amylle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 14:45:09 by amylle            #+#    #+#             */
-/*   Updated: 2023/11/04 15:28:02 by amylle           ###   ########.fr       */
+/*   Updated: 2024/02/16 19:14:50 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_format_pointer(void *ptr)
 	}	
 	str = ft_itoa_base((unsigned long)ptr, "0123456789abcdef");
 	if (!str)
-		return (NULL);
+		return (0);
 	len = ft_format_str("0x");
 	len += ft_format_str(str);
 	free (str);
