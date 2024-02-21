@@ -6,7 +6,7 @@
 #    By: amylle <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/03 13:33:47 by amylle            #+#    #+#              #
-#    Updated: 2023/12/11 18:23:59 by amylle           ###   ########.fr        #
+#    Updated: 2024/02/22 00:10:52 by amylle           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS		= ft_formats.c ft_printf.c ft_format_char.c ft_isformat.c ft_format_str.c\
 OBJS		= $(SRCS:.c=.o)
 
 CC			= cc
-CFLAGS		= -Wall -Werror -Wextra -I$(LIBFT_PATH)
+CFLAGS		= -g -Wall -Werror -Wextra -I$(LIBFT_PATH)
 
 RM			= rm -f
 
