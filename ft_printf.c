@@ -6,7 +6,7 @@
 /*   By: amylle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:46:08 by amylle            #+#    #+#             */
-/*   Updated: 2024/02/22 00:22:27 by amylle           ###   ########.fr       */
+/*   Updated: 2024/02/27 12:56:05 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,8 @@ int	ft_printf(const char *str, ...)
 	printcount = 0;
 	while (str[++i])
 	{
-		if (str[i] == '%' && str[i + 1])
-		{
-			if (ft_isformat(str[++i]))
-				printcount += ft_formats(str[i], args);
-			else
-				printcount += ft_format_char(str[--i]);
-		}
+		if (str[i] == '%' && str[i + 1] && ft_isformat(str[i + 1]))
+			printcount += ft_formats(str[++i], args);
 		else
 			printcount += ft_format_char(str[i]);
 	}
